@@ -1,5 +1,5 @@
 # Secret-Talk
-A simple demo project I have made with my team at SheCodes Hackathon (July 2018) in Hanoi. We came in fourth place.
+A simple DEMO project I have made with my team at SheCodes Hackathon (July 2018) in Hanoi. We came in fourth place.
 >> Some pictures of our team in the event: https://drive.google.com/open?id=1MEw_lghI_eja1i2n7S9pjEV-O8dkupj0 
 
 
