@@ -1,0 +1,365 @@
+<App>
+    <JavaScript>
+        var Observable = require("FuseJS/Observable");
+        var pageId = Observable(0);
+		var chat = Observable(0);
+		var massage_21 = Observable("");
+		var massage_22 = Observable("");
+
+        function changeTo1() {
+            pageId.value = "KRISS";
+        }
+        function changeTo2() {
+            pageId.value = "ANNA";
+        }
+        function changeTo3() {
+            pageId.value = "REFERENCES_KRISS";
+        }
+        function changeTo4() {
+            pageId.value = "REFERENCES_ANNA";
+        }
+		function changeTo5() {
+            pageId.value = "KRISS_OK";
+        }
+		function changeTo6() {
+            pageId.value = "TALK_KRISS";
+        }
+		function changeTo7() {
+            pageId.value = "ANNA_OK";
+        }
+		function changeTo8() {
+            pageId.value = "TALK_ANNA";
+        }
+		function changeTo9() {
+            pageId.value = "STORY_KRISS_OK";
+        }
+		function changeTo10() {
+            pageId.value = "VIDEO_KRISS";
+        }
+		function changeTo11() {
+            pageId.value = "INTRODUCTION";
+        }
+		function changeTo12() {
+            pageId.value = "INTRODUCTION";
+        }
+		function changeTo13() {
+            pageId.value = "KRISS";
+        }
+		function changeTo14() {
+            pageId.value = "ANNA";
+        }
+		function changeTo15() {
+            pageId.value = "INTRODUCTION";
+        }
+		function changeTo16() {
+            pageId.value = "INTRODUCTION";
+        }
+		function changeTo17() {
+            pageId.value = "INTRODUCTION";
+        }
+		function changeTo18() {
+            pageId.value = "INTRODUCTION";
+        }
+		function changeTo19() {
+            pageId.value = "KRISS_OK";
+        }
+		function changeTo20() {
+            pageId.value = "TALK_KRISS";
+        }
+		function changeTo21() {
+			chat.value = 1;
+			massage_21.value = "Question_Hold hand Have babies???";
+        }
+		function changeTo22() {
+			chat.value = 2;
+			massage_22.value = "Answer_Impossible!";
+        }
+        module.exports = {
+            changeTo1: changeTo1, changeTo2: changeTo2, changeTo3: changeTo3, changeTo4: changeTo4, changeTo5: changeTo5, changeTo6: changeTo6, 
+			changeTo7: changeTo7, changeTo8: changeTo8, changeTo9: changeTo9, changeTo10: changeTo10, changeTo11: changeTo11, changeTo12: changeTo12,
+			changeTo13: changeTo13, changeTo14: changeTo14, changeTo15: changeTo15, changeTo16: changeTo16, changeTo17: changeTo17, changeTo18:changeTo18,
+			changeTo19: changeTo19, changeTo20: changeTo20, changeTo21: changeTo21, changeTo22: changeTo22, massage_21: massage_21, massage_22: massage_22,
+			pageId: pageId, chat: chat
+        }
+    </JavaScript>
+	<DockPanel />
+	<Panel Alignment="Top" Color="#E020D0" Height="100">
+		<Text Value="SECRET TALK" TextColor="#FDFCFC" FontSize="45" TextAlignment="Center" Alignment="Center" LayoutRole="Standard" Layer="Overlay" />
+	</Panel>
+	<PageControl Active="{pageId}">
+		<Page ux:Name="INTRODUCTION">
+			<Panel>
+				<StackPanel>
+					<TextInput Value="HI, HOW ARE YOU TODAY?" Alignment="Center" TextWrapping="Wrap" TextColor="#E512D3" TextAlignment="Center" Width="300" FontSize="25" Y="180" />
+					<Text Value="WHO DO YOU WANT TO TALK TO?" TextColor="#1F18EA" Y="260" X="65" />
+					<Image File="C:\Users\SMC\Documents\Fuse\SECRET_TALK\kriss.jpg" Alignment="Left" Width="130" Height="150" Layer="Layout" X="40" Y="270" />
+					<Text Value="Kriss" Color="#FEFDFE" FontSize="25" Y="293" X="75" TextColor="#FDF9F9" Layer="Layout" LayoutRole="Standard" />
+					<Image File="C:\Users\SMC\Documents\Fuse\SECRET_TALK\anna.jpeg" Alignment="Right" Width="130" Height="150" X="-40" Y="90" />
+					<Text Value="Anna" TextColor="#FDF9FD" FontSize="25" X="240" Y="115" />
+					<Circle Alignment="TopCenter" Color="#E920C4" LayoutRole="Standard" Width="80" Height="80" Clicked="{{changeTo1}}" X="-85" Y="60">
+						<WhilePressed>
+					        <Scale Factor="2" Duration="0.2" />
+					    </WhilePressed>
+					</Circle>
+					<Circle Color="#E723D7" Clicked="{{changeTo2}}" Y="-20" Width="80" Height="80" X="230">
+						<WhilePressed>
+					        <Scale Factor="2" Duration="0.2" />
+					    </WhilePressed>
+					</Circle>
+				</StackPanel>
+			</Panel>
+		</Page>
+		<Page ux:Name="KRISS">
+			<Panel Color="#F8F3F4" Height="1000">
+				<StackPanel>
+					<Image File="C:\Users\SMC\Documents\Fuse\SECRET_TALK\kriss.jpg" Alignment="Center" Layer="Layout" Y="640" X="-68" Width="200" Height="150" />
+					<Text Value="How old are you?" X="150" Width="150" Height="150" TextWrapping="Wrap" TextColor="#363655" FontSize="40" LineSpacing="15" Y="190" />
+					<Circle Color="#BCE1E1" Y="170" X="205" Height="45" Width="60" Clicked="{{changeTo3}}">
+                        <WhilePressed>
+					        <Scale Factor="2" Duration="0.2" />
+					    </WhilePressed>
+                    </Circle>
+					<Panel Color="#C5E0EC" Width="175" Height="55" Y="120" Alignment="Default" X="145" />
+                    <Image File="C:\Users\SMC\Documents\Fuse\SECRET_TALK\CHATBOX.jpg" Alignment="Center" Layer="Layout" Height="300" Width="300" X="40" Y="-95" />
+                    <Text Value="BACK" FontSize="20" X="280" Y="25" TextColor="#FDFAFA">
+                    	<Shadow />
+                    </Text>
+					<Circle Color="#C948BE" Y="700" X="270" Height="70" Width="70" Clicked="{{changeTo11}}" Layer="Background">
+                        <WhilePressed>
+					        <Scale Factor="2" Duration="0.2" />
+					    </WhilePressed>
+                    </Circle>
+				</StackPanel>
+			</Panel>
+		</Page>
+		<Page ux:Name="ANNA">
+			<Panel Color="#F8F3F4" Height="1000">
+				<StackPanel>
+					<Image File="C:\Users\SMC\Documents\Fuse\SECRET_TALK\anna.jpeg" Alignment="Center" Layer="Layout" Y="640" X="-68" Width="200" Height="150" />
+					<Text Value="How old are you?" X="150" Width="150" Height="150" TextWrapping="Wrap" TextColor="#363655" FontSize="40" LineSpacing="15" Y="200" />
+                    <Circle Color="#BCE3E3" Y="180" X="215" Height="40" Clicked="{{changeTo4}}" Width="40">
+                        <WhilePressed>
+					        <Scale Factor="2" Duration="0.2" />
+					    </WhilePressed>
+                    </Circle>
+					<Panel Color="#C5E0EC" Width="175" Height="40" Y="140" Alignment="Default" X="145" />
+                    <Image File="C:\Users\SMC\Documents\Fuse\SECRET_TALK\CHATBOX.jpg" Alignment="Center" Layer="Layout" Height="300" Width="300" X="40" Y="-58" />
+					<Text Value="BACK" FontSize="20" X="280" Y="40" TextColor="#FDFAFA">
+                    	<Shadow />
+                    </Text>
+					<Circle Color="#C948BE" Y="700" X="270" Height="70" Width="70" Clicked="{{changeTo12}}" Layer="Background">
+                        <WhilePressed>
+					        <Scale Factor="2" Duration="0.2" />
+					    </WhilePressed>
+                    </Circle>
+				</StackPanel>
+			</Panel>
+		</Page>
+
+        <Page ux:Name="REFERENCES_KRISS">
+			<Panel Color="#F8F3F4" Height="100">
+				<StackPanel>
+                    <Image File="C:\Users\SMC\Documents\Fuse\SECRET_TALK\kriss.jpg" Alignment="Center" Layer="Layout" X="-68" Width="200" Height="150" Y="190" />
+					<Text Value="References to your parents (phone, gmail...)" X="150" Width="150" Height="150" TextWrapping="Wrap" TextColor="#242439" LineSpacing="15" Y="-250" FontSize="20" />
+					<Panel Color="#C5E0EC" Width="175" Height="55" Y="-290" Alignment="Default" X="145" />
+					<Text Value="OK" X="135" Y="-210" TextColor="#FBF8F8" FontSize="20" />
+					<Circle Width="100" Height="50" Color="#D91A99" X="99" Y="-247" Clicked="{{changeTo5}}">
+						<WhilePressed>
+					        <Scale Factor="2" Duration="0.2" />
+					    </WhilePressed>
+					</Circle>
+                    <Image File="C:\Users\SMC\Documents\Fuse\SECRET_TALK\CHATBOX.jpg" Alignment="Center" Layer="Layout" Height="300" Width="300" X="40" Y="-550" />
+                    <Text Value="SKIP" TextColor="#100D0D" TextWrapping="NoWrap" TextAlignment="Center" FontSize="25" Alignment="Bottom" Layer="Background" X="305" Y="240">
+                    	<Shadow />
+                    </Text>
+                    <Circle Color="#F8F1F1" Y="240" X="300" Width="60" Height="60" Layer="Background" Clicked="{{changeTo6}}">
+						<WhilePressed>
+					        <Scale Factor="2" Duration="0.2" />
+					    </WhilePressed>
+					</Circle>
+					<Text Value="BACK" TextColor="#100D0D" TextWrapping="NoWrap" TextAlignment="Center" FontSize="25" Alignment="Bottom" Layer="Background" X="225" Y="240">
+                    	<Shadow />
+                    </Text>
+                    <Circle Color="#F8F1F1" Y="240" X="225" Width="60" Height="60" Layer="Background" Clicked="{{changeTo13}}">
+						<WhilePressed>
+					        <Scale Factor="2" Duration="0.2" />
+					    </WhilePressed>
+					</Circle>
+				</StackPanel>
+			</Panel>
+		</Page>
+        <Page ux:Name="REFERENCES_ANNA">
+			<Panel Color="#F8F3F4" Height="1000">
+				<StackPanel Height="100">
+					<Image File="C:\Users\SMC\Documents\Fuse\SECRET_TALK\anna.jpeg" Alignment="Center" Layer="Layout" X="-68" Width="200" Height="150" Y="190" />
+					<Text Value="References to your parents (phone, gmail...)" X="150" Width="150" Height="150" TextWrapping="Wrap" TextColor="#242439" LineSpacing="15" Y="-250" FontSize="20" />
+					<Panel Color="#C5E0EC" Width="175" Height="55" Y="-290" Alignment="Default" X="145" />
+					<Text Value="OK" X="135" Y="-210" TextColor="#FBF8F8" FontSize="20" />
+					<Circle Width="100" Height="50" Color="#D91A99" X="99" Y="-247" Clicked="{{changeTo7}}">
+						<WhilePressed>
+					        <Scale Factor="2" Duration="0.2" />
+					    </WhilePressed>
+					</Circle>
+                    <Image File="C:\Users\SMC\Documents\Fuse\SECRET_TALK\CHATBOX.jpg" Alignment="Center" Layer="Layout" Height="300" Width="300" X="40" Y="-570" />
+                    <Text Value="SKIP" TextColor="#100D0D" TextWrapping="NoWrap" TextAlignment="Center" FontSize="25" Alignment="Bottom" Layer="Background" X="305" Y="240">
+                    	<Shadow />
+                    </Text>
+                    <Circle Color="#F8F1F1" Y="240" X="300" Width="60" Height="60" Layer="Background" Clicked="{{changeTo8}}">
+						<WhilePressed>
+					        <Scale Factor="2" Duration="0.2" />
+					    </WhilePressed>
+					</Circle>
+					<Text Value="BACK" TextColor="#100D0D" TextWrapping="NoWrap" TextAlignment="Center" FontSize="25" Alignment="Bottom" Layer="Background" X="225" Y="240">
+                    	<Shadow />
+                    </Text>
+                    <Circle Color="#F8F1F1" Y="240" X="225" Width="60" Height="60" Layer="Background" Clicked="{{changeTo14}}">
+						<WhilePressed>
+					        <Scale Factor="2" Duration="0.2" />
+					    </WhilePressed>
+					</Circle>
+				</StackPanel>
+			</Panel>
+		</Page>
+		<Page ux:Name="KRISS_OK">
+			<Panel Color="#F8F3F4" Height="1000">
+				<StackPanel>
+					<Image File="C:\Users\SMC\Documents\Fuse\SECRET_TALK\kriss.jpg" Alignment="Center" Layer="Layout" Y="640" X="-68" Width="200" Height="150" />
+					<Text Value="References completed! Now talk with me!" X="150" Width="150" Height="150" TextWrapping="Wrap" TextColor="#363655" FontSize="20" LineSpacing="15" Y="190" />
+					<Panel Color="#C5E0EC" Width="175" Height="55" Y="155" Alignment="Default" X="145" />
+					<Circle Color="#F2DEED" Y="280" X="195" Height="45" Width="60" Clicked="{{changeTo9}}">
+                        <WhilePressed>
+					        <Scale Factor="2" Duration="0.2" />
+					    </WhilePressed>
+                    </Circle> 
+                    <Image File="C:\Users\SMC\Documents\Fuse\SECRET_TALK\CHATBOX.jpg" Alignment="Center" Layer="Layout" Height="300" Width="300" X="40" Y="-95" />
+                    <Text FontSize="25" Width="150" Height="150" X="250" Y="640" Layer="Background" Value="STORY" TextColor="#7C3CB7" />
+                    <Text Value="VIDEO" FontSize="25" X="250" Width="150" Height="150" TextColor="#2E26C3" />
+                    <Text Value="GAME" FontSize="25" Width="150" Height="150" TextColor="#12134D" Y="755" X="209" TextAlignment="Center" Layer="Background" />
+                    <Image File="C:\Users\SMC\Documents\Fuse\SECRET_TALK\control.png" Alignment="Default" Layer="Background" Y="735" X="330" Width="200" Height="150" StretchMode="Uniform" />
+					<Image File="C:\Users\SMC\Documents\Fuse\SECRET_TALK\control.png" Alignment="Default" Layer="Background" Y="681" X="330" Width="200" Height="150" StretchMode="Uniform" />
+					<Image File="C:\Users\SMC\Documents\Fuse\SECRET_TALK\control.png" Alignment="Default" Layer="Background" Y="621" X="330" Width="200" Height="150" StretchMode="Uniform" />
+					<Text Value="HOME" FontSize="20" X="15" Y="-530" TextColor="#FDFAFA">
+                    	<Shadow />
+                    </Text>
+					<Circle Color="#FA57EC" Y="300" Height="70" Width="70" Clicked="{{changeTo15}}" Layer="Background" X="8">
+                        <WhilePressed>
+					        <Scale Factor="2" Duration="0.2" />
+					    </WhilePressed>
+                    </Circle>
+				</StackPanel>
+			</Panel>
+		</Page>
+		<Page ux:Name="TALK_KRISS">
+			<Panel Color="#F8F3F4" Height="1000">
+				<StackPanel>
+					<Image File="C:\Users\SMC\Documents\Fuse\SECRET_TALK\kriss.jpg" Alignment="Center" Layer="Layout" Y="640" X="-68" Width="200" Height="150" />
+					<Text Value="Now talk with me!" X="150" Width="150" Height="150" TextWrapping="Wrap" TextColor="#363655" FontSize="25" LineSpacing="15" Y="190" />
+					<Panel Color="#C5E0EC" Width="175" Height="55" Y="155" Alignment="Default" X="145" />
+					<Circle Color="#F2DEED" Y="336" X="195" Height="45" Width="60" Clicked="{{changeTo10}}">
+                        <WhilePressed>
+					        <Scale Factor="2" Duration="0.2" />
+					    </WhilePressed>
+                    </Circle> 
+                    <Image File="C:\Users\SMC\Documents\Fuse\SECRET_TALK\CHATBOX.jpg" Alignment="Center" Layer="Layout" Height="300" Width="300" X="40" Y="-95" />
+                    <Text FontSize="25" Width="150" Height="150" X="250" Y="640" Layer="Background" Value="STORY" TextColor="#7C3CB7" />
+                    <Text Value="VIDEO" FontSize="25" X="250" Width="150" Height="150" TextColor="#2E26C3" />
+                    <Text Value="GAME" FontSize="25" Width="150" Height="150" TextColor="#12134D" Y="755" X="209" TextAlignment="Center" Layer="Background" />
+                    <Image File="C:\Users\SMC\Documents\Fuse\SECRET_TALK\control.png" Alignment="Default" Layer="Background" Y="735" X="330" Width="200" Height="150" StretchMode="Uniform" />
+					<Image File="C:\Users\SMC\Documents\Fuse\SECRET_TALK\control.png" Alignment="Default" Layer="Background" Y="681" X="330" Width="200" Height="150" StretchMode="Uniform" />
+					<Image File="C:\Users\SMC\Documents\Fuse\SECRET_TALK\control.png" Alignment="Default" Layer="Background" Y="621" X="330" Width="200" Height="150" StretchMode="Uniform" />
+					<Text Value="HOME" FontSize="20" X="15" Y="-530" TextColor="#FDFAFA">
+                    	<Shadow />
+                    </Text>
+					<Circle Color="#FA57EC" Y="300" Height="70" Width="70" Clicked="{{changeTo17}}" Layer="Background" X="8">
+                        <WhilePressed>
+					        <Scale Factor="2" Duration="0.2" />
+					    </WhilePressed>
+                    </Circle>
+				</StackPanel>
+			</Panel>
+		</Page>
+		<Page ux:Name="ANNA_OK">
+			<Panel Color="#F8F3F4" Height="1000">
+				<StackPanel>
+					<Circle Color="#F7F0F6" Y="555" Height="70" Width="70" Layer="Overlay" X="130" Clicked="{{changeTo21}}">	
+					</Circle>
+					<Text X="150" TextWrapping="Wrap" TextColor="#131320" FontSize="10" Y="460" Value="{massage_21}" Layer="Overlay" Color="#0A0A0A" TextAlignment="Left" Width="150" Height="100" LineSpacing="1" />
+					<Circle Color="#F6EFF5" Y="555" Height="70" Width="70" Layer="Overlay" X="260" Clicked="{{changeTo22}}">	
+					</Circle>
+					<Text X="165" TextWrapping="Wrap" TextColor="#131320" FontSize="10" Y="490" Value="{massage_22}" Layer="Overlay" Color="#0A0A0A" TextAlignment="Right" Width="150" Height="100" LineSpacing="1" />
+					<Image File="C:\Users\SMC\Documents\Fuse\SECRET_TALK\anna.jpeg" Alignment="Center" Layer="Layout" Y="640" X="-68" Width="200" Height="150" />
+					<Text Value="References completed! Now talk with me!" X="150" Width="150" Height="150" TextWrapping="Wrap" TextColor="#363655" FontSize="20" LineSpacing="15" Y="190" />
+					<Panel Color="#C5E0EC" Width="175" Height="55" Y="155" Alignment="Default" X="145" />
+                    <Image File="C:\Users\SMC\Documents\Fuse\SECRET_TALK\CHATBOX.jpg" Alignment="Center" Layer="Layout" Height="300" Width="300" X="40" Y="-60" />
+                    <Text FontSize="25" Width="150" Height="150" X="250" Y="640" Layer="Background" Value="STORY" TextColor="#7C3CB7" />
+                    <Text Value="VIDEO" FontSize="25" X="250" Width="150" Height="150" TextColor="#2E26C3" Y="45" />
+                    <Text Value="GAME" FontSize="25" Width="150" Height="150" TextColor="#12134D" Y="755" X="209" TextAlignment="Center" Layer="Background" />
+                    <Image File="C:\Users\SMC\Documents\Fuse\SECRET_TALK\control.png" Alignment="Default" Layer="Background" Y="735" X="330" Width="200" Height="150" StretchMode="Uniform" />
+					<Image File="C:\Users\SMC\Documents\Fuse\SECRET_TALK\control.png" Alignment="Default" Layer="Background" Y="681" X="330" Width="200" Height="150" StretchMode="Uniform" />
+					<Image File="C:\Users\SMC\Documents\Fuse\SECRET_TALK\control.png" Alignment="Default" Layer="Background" Y="621" X="330" Width="200" Height="150" StretchMode="Uniform" />
+					<Text Value="HOME" FontSize="20" X="15" Y="-485" TextColor="#FDFAFA">
+                    	<Shadow />
+                    </Text>
+					<Circle Color="#FA57EC" Y="300" Height="70" Width="70" Clicked="{{changeTo16}}" Layer="Background" X="8">
+                        <WhilePressed>
+					        <Scale Factor="2" Duration="0.2" />
+					    </WhilePressed>
+                    </Circle>
+				</StackPanel>
+			</Panel>
+		</Page>
+		<Page ux:Name="TALK_ANNA">
+			<Panel Color="#F8F3F4" Height="1000">
+				<StackPanel>
+					<Image File="C:\Users\SMC\Documents\Fuse\SECRET_TALK\anna.jpeg" Alignment="Center" Layer="Layout" Y="640" X="-68" Width="200" Height="150" />
+					<Text Value="Now talk with me!" X="150" Width="150" Height="150" TextWrapping="Wrap" TextColor="#363655" FontSize="25" LineSpacing="15" Y="190" />
+					<Panel Color="#C5E0EC" Width="175" Height="55" Y="155" Alignment="Default" X="145" />
+                    <Image File="C:\Users\SMC\Documents\Fuse\SECRET_TALK\CHATBOX.jpg" Alignment="Center" Layer="Layout" Height="300" Width="300" X="40" Y="-50" />
+                    <Text FontSize="25" Width="150" Height="150" X="250" Y="640" Layer="Background" Value="STORY" TextColor="#7C3CB7" />
+                    <Text Value="VIDEO" FontSize="25" X="250" Width="150" Height="150" TextColor="#2E26C3" Y="45" />
+                    <Text Value="GAME" FontSize="25" Width="150" Height="150" TextColor="#12134D" Y="755" X="209" TextAlignment="Center" Layer="Background" />
+                    <Image File="C:\Users\SMC\Documents\Fuse\SECRET_TALK\control.png" Alignment="Default" Layer="Background" Y="735" X="330" Width="200" Height="150" StretchMode="Uniform" />
+					<Image File="C:\Users\SMC\Documents\Fuse\SECRET_TALK\control.png" Alignment="Default" Layer="Background" Y="681" X="330" Width="200" Height="150" StretchMode="Uniform" />
+					<Image File="C:\Users\SMC\Documents\Fuse\SECRET_TALK\control.png" Alignment="Default" Layer="Background" Y="621" X="330" Width="200" Height="150" StretchMode="Uniform" />
+					<Text Value="HOME" FontSize="20" X="15" Y="-485" TextColor="#FDFAFA">
+                    	<Shadow />
+                    </Text>
+					<Circle Color="#FA57EC" Y="300" Height="70" Width="70" Clicked="{{changeTo18}}" Layer="Background" X="8">
+                        <WhilePressed>
+					        <Scale Factor="2" Duration="0.2" />
+					    </WhilePressed>
+                    </Circle>
+				</StackPanel>
+			</Panel>
+		</Page>
+		<Page ux:Name="STORY_KRISS_OK">
+			<Panel Color="#F8F3F4" Height="1000">
+				<StackPanel>
+					<Text Value="BACK" FontSize="20" X="280" Y="721" TextColor="#FEFDFD">
+                    	<Shadow />
+                    </Text>
+					<Circle Color="#C948BE" Y="700" X="270" Height="70" Width="70" Clicked="{{changeTo19}}" Layer="Background">
+                        <WhilePressed>
+					        <Scale Factor="2" Duration="0.2" />
+					    </WhilePressed>
+                    </Circle>
+				</StackPanel>
+			</Panel>
+		</Page>
+		<Page ux:Name="VIDEO_KRISS">
+			<Panel Color="#F8F3F4" Height="1000">
+				<StackPanel>
+					<Text Value="BACK" FontSize="20" X="280" Y="721" TextColor="#FDFAFA">
+                    	<Shadow />
+                    </Text>
+					<Circle Color="#C948BE" Y="700" X="270" Height="70" Width="70" Clicked="{{changeTo20}}" Layer="Background">
+                        <WhilePressed>
+					        <Scale Factor="2" Duration="0.2" />
+					    </WhilePressed>
+                    </Circle>
+				</StackPanel>
+			</Panel>
+		</Page>
+	</PageControl>
+	<StackPanel />
+</App>
